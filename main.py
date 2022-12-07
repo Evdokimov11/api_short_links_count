@@ -4,7 +4,7 @@ import argparse
 
 from urllib.parse import urlparse
 from dotenv import load_dotenv
-load_dotenv()
+
 
 
 def shorten_link(token, url) :
@@ -52,6 +52,8 @@ def is_bitlink(url, api_key):
   
 if __name__ == '__main__':
    
+    load_dotenv()
+    
     parser = argparse.ArgumentParser(
         description='Программа сокращает ссылки и считает кол-во переходов по ней'
     )
